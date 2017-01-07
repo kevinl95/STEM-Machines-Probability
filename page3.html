@@ -1,0 +1,68 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>One Number</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1024">
+<!--Page Head-->
+<script>
+var link = document.getElementById('getNumber'); // Gets the link
+link.onclick = getNumber; // Runs the function on click
+
+function getNumber() {
+    var minNumber = 0; // The minimum number you want
+    var maxNumber = 9; // The maximum number you want
+    var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
+    $('#myNumber').html(randomnumber); // Sets content of <div> to number
+    return false; // Returns false just to tidy everything up
+}
+</script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Body-P
+{
+    margin:0.0px 0.0px 12.0px 0.0px; text-align:center; font-weight:400;
+}
+.Body-C
+{
+    font-family:"Georgia", serif; font-size:21.0px; line-height:1.19em;
+}
+.Button1,.Button1:link,.Button1:visited{background-image:url('wpimages/wp26d3fd92_06.png');background-position:0px 0px;text-decoration:none;display:block;position:absolute;}
+.Button1:focus{outline-style:none;}
+.Button1:hover{background-position:0px -294px;}
+.Button1:active{background-position:0px -147px;}
+</style>
+</head>
+
+<body text="#000000" style="background:#ffffff url('wpimages/wp6a4f36e8_06.png') no-repeat scroll top center; height:768px;">
+<div style="background-color:transparent;margin-left:auto;margin-right:auto;position:relative;width:1024px;height:768px;">
+<img src="wpimages/wpac574db4_06.png" border="0" width="817" height="703" alt="" style="position:absolute;left:188px;top:0px;">
+<a href="page2.html" id="btn_20" class="Button1" style="position:absolute;left:11px;top:290px;width:162px;height:147px;"></a>
+<div style="position:absolute;left:21px;top:437px;width:128px;height:53px;overflow:hidden;">
+<p class="Body-P"><span class="Body-C">Return to Menu</span></p>
+</div>
+<map id="map0" name="map0">
+    <area shape="poly" coords="132,191,142,189,142,180,147,185,154,183,163,178,162,169,168,175,174,167,179,162,178,154,185,156,187,150,190,144,193,135,198,127,198,112,200,104,200,91,194,91,199,82,197,74,192,68,196,65,190,58,185,49,183,46,179,48,183,42,177,37,166,30,160,35,164,26,157,23,149,18,142,25,141,15,134,12,124,15,122,18,120,10,102,10,98,18,95,10,87,11,79,16,81,18,78,24,73,18,64,22,57,28,60,35,54,30,47,36,41,43,39,45,42,50,35,48,32,57,27,66,30,68,24,76,22,86,24,90,22,97,22,112,23,122,25,132,31,136,30,142,34,151,39,157,43,154,43,164,47,167,54,173,60,168,59,173,63,181,71,185,79,180,79,185,80,192,90,190,96,192,101,183,101,192,120,192,121,184,126,193" href="index.html" alt="">
+    <area shape="poly" coords="132,155,123,155,123,148,125,147,126,147,131,152,131,153" href="index.html" alt="">
+    <area shape="poly" coords="99,155,90,155,89,153,91,151,93,150,93,149,95,147,97,149,98,151" href="index.html" alt="">
+    <area shape="poly" coords="163,125,160,114,161,115,167,115,165,119" href="index.html" alt="">
+    <area shape="poly" coords="57,123,56,118,56,117,55,114,59,115,61,115,61,117,60,120,59,122" href="index.html" alt="">
+    <area shape="poly" coords="58,87,55,84,57,80,59,80,60,82,62,84" href="index.html" alt="">
+    <area shape="poly" coords="165,86,163,86,159,85,159,84,160,83,163,79,164,79,164,81,165,83" href="index.html" alt="">
+</map>
+<img src="wpimages/wp50cd4e00_06.png" border="0" width="218" height="204" title="" alt="Home" usemap="#map0" style="position:absolute;left:0px;top:564px;">
+<img src="wpimages/wp088d0b70_06.png" border="0" width="239" height="219" alt="" style="position:absolute;left:477px;top:510px; id="getNumber" /*Tag Style*/" __AddCode="here" onclick="myFunction()">
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = Math.floor((Math.random() * 9) + 1); ;
+}
+</script><!--Postamble-->
+<img src="wpimages/wp79900d5c_06.png" border="0" width="577" height="29" title="" alt="Press the button to get a random number!&#10;" style="position:absolute;left:324px;top:729px;">
+<div style="position:absolute;left:618px;top:169px;width:145px;height:145px;">
+    <p id="demo" style="font-size:150px; color:lime; font-family:courier"></p>
+</div>
+</div>
+</body>
+</html>
