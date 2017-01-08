@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Three Numbers</title>
+<title>Double Spinner</title>
 <meta name="Generator" content="Serif WebPlus X6">
-<meta name="viewport" content="width=1024">
+<meta name="viewport" content="width=1065">
 <!--Page Head-->
 <script>
 var link = document.getElementById('getNumber'); // Gets the link
@@ -36,9 +36,32 @@ body{margin:0;padding:0;}
 </head>
 
 <body text="#000000" style="background:#ffffff url('wpimages/wp6a4f36e8_06.png') no-repeat scroll top center; height:768px;">
-<div style="background-color:transparent;margin-left:auto;margin-right:auto;position:relative;width:1024px;height:768px;">
-<img src="wpimages/wpdddb8f0e_06.png" border="0" width="817" height="703" alt="" style="position:absolute;left:188px;top:0px;">
-<a href="page2.html" id="btn_20" class="Button1" style="position:absolute;left:11px;top:290px;width:162px;height:147px;"></a>
+<div style="background-color:transparent;margin-left:auto;margin-right:auto;position:relative;width:1065px;height:768px;">
+<object classid='CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95'
+ codebase='http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701'
+ standby='Loading Player...'
+ type='application/x-oleobject'
+ style="position:absolute;left:270px;top:154px;width:76px; height:32px;">
+    <param name='fileName' value="spinner.mp3">
+    <param name='animationatStart' value='true'>
+    <param name='transparentatStart' value='true'>
+    <param name='autoStart' value="false">
+    <param name='showControls' value="true">
+    <param name='loop' value="false">
+    <embed type='audio/mpeg'
+     pluginspage='http://microsoft.com/windows/mediaplayer/en/download/'
+     style="width:76px; height:32px;"
+     displaysize='4' autosize='-1'
+     bgcolor='darkblue'
+     showcontrols="true" showtracker='-1' showdisplay='0'
+     showstatusbar='-1' videoborder3d='-1'
+     src="spinner.mp3"
+     autostart="false"
+     designtimesp='5311'
+     loop="false">
+    </embed>
+</object>
+<a href="page8.html" id="btn_20" class="Button1" style="position:absolute;left:11px;top:290px;width:162px;height:147px;"></a>
 <div style="position:absolute;left:21px;top:437px;width:128px;height:53px;overflow:hidden;">
 <p class="Body-P"><span class="Body-C">Return to Menu</span></p>
 </div>
@@ -52,16 +75,46 @@ body{margin:0;padding:0;}
     <area shape="poly" coords="165,86,163,86,159,85,159,84,160,83,163,79,164,79,164,81,165,83" href="index.html" alt="">
 </map>
 <img src="wpimages/wp50cd4e00_06.png" border="0" width="218" height="204" title="" alt="Home" usemap="#map0" style="position:absolute;left:0px;top:564px;">
-<img src="wpimages/wp088d0b70_06.png" border="0" width="239" height="219" alt="" style="position:absolute;left:477px;top:510px; id="getNumber" /*Tag Style*/" __AddCode="here" onclick="myFunction()">
-
+<map id="map1" name="map1">
+    <area shape="poly" coords="3,698,3,690,4,686,4,677,5,675,5,673,6,667,6,655,1,655,7,652,3,640,2,638,1,635,0,633,0,699" href="index.html" alt="">
+    <area shape="poly" coords="2,631,0,628,0,632" href="index.html" alt="">
+    <area shape="rect" coords="76,154,153,187" href="spinner.mp3" alt="">
+</map>
+<img src="wpimages/wpa5aeb9be_06.png" border="0" width="871" height="768" alt="" usemap="#map1" style="position:absolute;left:194px;top:0px;">
+<!--BeforeObject-->
 <script>
 function myFunction() {
-    document.getElementById("demo").innerHTML = Math.floor((Math.random() * 899) + 100); ;
+	image = document.getElementById("demo");
+    var diceval = Math.floor((Math.random() * 2) + 1);
+    if(diceval == 1){
+    	image.src="spinners/slide2.png";
+	} else {
+    	image.src="spinners/slide3.png";
+	}
 }
-</script><!--Postamble-->
-<img src="wpimages/wp2b3f6bc8_06.png" border="0" width="567" height="29" title="" alt="Press the button to get random numbers!&#10;" style="position:absolute;left:324px;top:729px;">
-<div style="position:absolute;left:447px;top:132px;width:145px;height:145px;">
-    <p id="demo" style="font-size:150px; color:lime; font-family:courier"></p>
+</script>
+<script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
+<script>  
+    //listen to shake event
+    var shakeEvent = new Shake({threshold: 8});
+    shakeEvent.start();
+    window.addEventListener('shake', function(){
+        document.getElementById('dicesound').play();
+        myFunction();
+    }, false);
+
+    //stop listening
+    function stopShake(){
+        shakeEvent.stop();
+    }
+</script>
+<audio id="dicesound" src="spinner.mp3"></audio>
+<img src="wpimages/wpa2bc4e96_06.png" border="0" width="239" height="214" alt="" style="position:absolute;left:366px;top:554px; id="getNumber" /*Tag Style*/" __AddCode="here" onclick="myFunction();document.getElementById('dicesound').play();">
+
+
+<img src="wpimages/wpf2809fb3_06.png" border="0" width="190" height="76" title="" alt="OR shake &#10;your device!&#10;" style="position:absolute;left:635px;top:644px;">
+<div style="position:absolute;left:366px;top:222px;width:539px;height:331px;">
+    <img id="demo" src="spinners/slide2.png" width="100%" height="100%"/>
 </div>
 </div>
 </body>
