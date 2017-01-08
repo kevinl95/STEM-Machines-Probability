@@ -100,7 +100,7 @@ function myFunction() {
 <script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
 <script>  
     //listen to shake event
-    var shakeEvent = new Shake({threshold: 2});
+    var shakeEvent = new Shake({threshold: 1});
     shakeEvent.start();
     window.addEventListener('shake', function(){
         document.getElementById('dicesound').play();
